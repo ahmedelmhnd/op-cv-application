@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-function CV({name}) 
+function CV({props}) 
 {
 
     return(
-        <div>
-            <h1>{name}</h1>
+        <div className="cv">
+            <h1>{props.name}</h1>
         </div>
     );
 }

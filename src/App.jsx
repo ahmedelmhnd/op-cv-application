@@ -13,10 +13,10 @@ function App() {
   }
 
   return (
-    <>
+    <div className="container">
       <InfoHeader nameHandler={handleName}></InfoHeader>
-      <CV name={formData.name}></CV>
-    </>
+      <CV props={formData}></CV>
+      </div>
   );
 }
 
