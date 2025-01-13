@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function InfoHeader() {
+function InfoHeader({nameHandler}) {
   return <div>
     <h1>General Info</h1>
     <label htmlFor="name">Name</label>
-    <input type="text" id="name" />
+    <input type="text" id="name" onChange={nameHandler} />
 
   </div>;
 }
