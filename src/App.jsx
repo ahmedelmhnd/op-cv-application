@@ -6,17 +6,27 @@ import InfoHeader from "./components/InfoHeader";
 import CV from "./components/CV";
 
 function App() {
-  const [formData, setFormData] = useState({ name: "John" });
+  const intitalForm = {
+    firstName: "John",
+    lastName: "Brown",
+    title: "Mr.",
+    phone: 999999999,
+    email: "johnb@benterprise.com",
+    about: "I like cats"
+  };
+  const [formData, setFormData] = useState(intitalForm);
 
-  function handleName(firstName) {
-    setFormData({ ...formData, name: firstName });
+  function handleForm(data) {
+    setFormData(data);
   }
+
+
 
   return (
     <div className="container">
-      <InfoHeader nameHandler={handleName}></InfoHeader>
+      <InfoHeader formHandler={handleForm}></InfoHeader>
       <CV props={formData}></CV>
-      </div>
+    </div>
   );
 }
 
