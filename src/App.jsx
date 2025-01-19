@@ -4,9 +4,11 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import InfoHeader from "./components/InfoHeader";
 import CV from "./components/CV";
+import Education from "./components/Education";
 
 function App() {
-  const intitalForm = {
+
+  const intitalHeader = {
     firstName: "John",
     lastName: "Brown",
     title: "Mr.",
@@ -14,18 +16,47 @@ function App() {
     email: "johnb@benterprise.com",
     about: "I like cats"
   };
-  const [formData, setFormData] = useState(intitalForm);
 
-  function handleForm(data) {
-    setFormData(data);
+  const initialEducation = {
+    degree: "Doctorate of Philosophy",
+    school: "ChatGpt University",
+    course: "Prompt Engineering",
+    grade: "4.0 GPA",
+    from: "01/01/2030",
+    to: "01/01/2035",
+    about: "First Class Honours, Vice-President of procrastination club"
+  }
+  const initialExperience = {
+    
+  }
+
+  const [headerData, setHeaderData] = useState(intitalHeader);
+  const [educationData, setEducationData] = useState(initialEducation);
+  const [experienceData, setExperienceData] = useState(initialExperience);
+
+  const allData = {headerData, educationData, experienceData};
+
+  function handleHeader(data) {
+    setHeaderData(data);
+  }
+
+  function handleEducation(data) {
+    setEducationData(data);
+  }
+
+  function handleExperience(data) {
+    setExperienceData(data);
   }
 
 
 
   return (
     <div className="container">
-      <InfoHeader formHandler={handleForm}></InfoHeader>
-      <CV props={formData}></CV>
+      <div className="forms-container">
+      <InfoHeader formHandler={handleHeader}></InfoHeader>
+      <Education formHandler={handleEducation}></Education>
+      </div>
+      <CV props={allData}></CV>
     </div>
   );
 }
