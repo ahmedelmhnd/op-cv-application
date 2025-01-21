@@ -17,6 +17,7 @@ html, body{
   gap: 30px;
   align-items: flex-start;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .cv {
@@ -31,3 +32,17 @@ html, body{
   flex-direction: column;
   gap: 20px;
 }
+
+
+.edit-button{
+  width: 20px;
+  filter: invert(90%);
+
+  transition: transform 0.5s ease-out;
+}
+
+.edit-button:hover{
+  transform: scale(130%);
+}
+
+

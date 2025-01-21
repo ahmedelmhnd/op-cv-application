@@ -1,0 +1,37 @@
+.input-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 165px 165px;
+  
+  }
+  
+  .experience-form {
+    width: 400px;
+    background-color: rgb(63, 63, 63);
+    border-radius: 15px;
+    padding: 20px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .submit-form-button {
+    width: 100px;
+    background-color: white;
+    color: black;
+  }
+  
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
